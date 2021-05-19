@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <style>
+        div#area {
+            background:rgb(255, 0, 191);
+            font: normal 15pt italic;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        body {
+            background-color: rgb(122, 19, 45);
+        }
+    </style>
+</head>
+<body>
+    <div id='area'>
+        Interact with me...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+        var count = 0
+        function clicar() {
+            if (count == 0) {
+            a.innerText = 'Wow! Try again!'
+            count += 1
+            } else {
+                a.innerText = 'Interact with me...'
+                count -= 1
+            }
+        }
+        function entrou() {
+            a.style.fontSize="20pt"
+        }
+        function saiu() {
+            a.style.fontSize="15pt"
+        }
+    </script>
+</body>
+</html>

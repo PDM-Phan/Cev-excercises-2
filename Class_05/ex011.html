@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge</title>
+    <style>
+        body {
+            background-color: rgb(154, 230, 186);
+            font: normal 13pt oblique;
+            color: rgb(187, 55, 7);
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Hey! Where do you live?</strong></h1>
+    <p>Put your country bellow:</p>
+    <input type="text" name="txtco" id="txtco">
+    <input type="button" value="My reaction..." onclick="verify()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verify() {
+            var country = window.document.getElementById("txtco").value.toUpperCase()
+            var res = window.document.getElementById("res")
+            res.innerHTML = `So you live in ${country}...`
+            if (country != 'BRAZIL') {
+                res.innerHTML += 'Meh... Ok have great time!</br>'
+            } else {
+                res.innerHTML += ' Damn mate! <strong>YOU ARE FUCKING AMAZING!</strong>'
+            }
+        }
+    </script>
+</body>
+</html>

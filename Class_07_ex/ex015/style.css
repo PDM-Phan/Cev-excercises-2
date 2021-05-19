@@ -1,0 +1,42 @@
+body {
+    background: rgb(86, 78, 88);
+    font: normal 15pt oblique;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section { 
+    background: white;
+    border-radius: 10px; /*Arredondar as bordas*/
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.575); 
+    /*
+    deslocamento vertical;
+    deslocamento horizontal;
+    espaçamento.
+    */
+}
+
+footer { 
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+}
+
+img {
+    border-radius: 30px;
+    max-width: 250px;
+    max-height: 170px;
+    width: auto;
+    height: auto;
+}
+
+div {
+    text-align: center;
+    padding-top: 10px;
+}
